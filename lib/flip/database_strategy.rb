@@ -24,7 +24,7 @@ module Flip
 
     def switch! key, enable
       feature = @klass.where(key: key.to_s).first_or_initialize
-      feature.enable = enable
+      feature.enabled = enable
       feature.save!
     end
 
